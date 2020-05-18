@@ -1,6 +1,9 @@
-#until MVP is complete
+#keys to prevent from updload to prod, etc.
 package-lock.json
 client/package-lock.json
+config/production.json
+config/default.json
+
 # Ignore Mac system files, including redundancies since case-sensitivity matters, and I've seen each spelling referenced online.
 .DS_STORE
 .DS_Store
