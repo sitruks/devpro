@@ -11,7 +11,6 @@ const User = require('../../models/User');
 // @route   GET api/auth
 // @desc    Authentication route
 // @access  Public
-
 // bring in middleware above, then add in as a second parameter to use
 router.get('/', auth, async (req, res) => {
     try {
