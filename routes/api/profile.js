@@ -279,7 +279,7 @@ router.get('/github/:username', async (req, res) => {
         );
         const headers = {
             'user-agent': 'node.js',
-            Authorization: `token ${config.get('githubClientId', 'githubSecret')}`
+            Authorization: `token ${config.get('githubSecretToken')}`
         };
 
         const gitHubResponse = await axios.get(uri, { headers });
