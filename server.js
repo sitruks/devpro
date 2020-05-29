@@ -22,6 +22,6 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(
     PORT, () => console.log(
-        `Your server is required for a job \nCODENAME PORT : ${PORT}\n...\n...`
+        `Your server is required for a job \nusing PORT ...\n...\n...\n...  ${PORT}`
     )
 );

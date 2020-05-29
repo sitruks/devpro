@@ -1,12 +1,34 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Navbar } from './components/layout/Navbar';
+import { Landing } from './components/layout/Landing';
+import { Login } from './components/auth/Login';
+import Register from './components/auth/Register';
+import Alert from './components/layout/Alert';
+
+// Redux import, then wrap the provider like done with router-fragment
+import { Provider } from 'react-redux';
+import store from './store';
+// Styles
 import './App.css';
 
+
 const App = () => (
-  <Fragment>
-    <h1>
-      DevPro, a MERN - Redux App
-    </h1>
-  </Fragment>
-  );
+  <Provider store={store}>
+    <Router>
+      <Fragment>
+        <Navbar />
+        <Route exact path='/' component={Landing} />
+        <section className="container">
+          <Alert />
+          <Switch>
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
+          </Switch>
+        </section>
+      </Fragment>
+    </Router>
+  </Provider>
+);
 
 export default App;
