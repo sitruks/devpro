@@ -7,8 +7,7 @@ export const Landing = () => {
             <div className='dark-overlay'>
                 <div className='landing-inner'>
                     <h1 className='x-large'>Welcome to the Archives</h1>
-                    <p className='lead'>
-Bang bang bang bang</p>
+                    <p className='lead'> nanananananananananananana Archives!</p>
                     <div className='buttons'>
                         <Link to='/register' className='btn btn-primary'>
                             Sign Up

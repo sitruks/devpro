@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router();
-const auth = require('../../middleware/auth');
 const bcrypt = require('bcryptjs');
+const auth = require('../../middleware/auth');
 const jwt = require('jsonwebtoken');
 const config = require('config');
 const { check, validationResult } = require('express-validator');
@@ -9,8 +9,8 @@ const { check, validationResult } = require('express-validator');
 const User = require('../../models/User');
 
 // @route   GET api/auth
-// @desc    Authentication route
-// @access  Public
+// @desc    Get user by token
+// @access  Private
 // bring in middleware above, then add in as a second parameter to use
 router.get('/', auth, async (req, res) => {
     try {
@@ -18,7 +18,7 @@ router.get('/', auth, async (req, res) => {
         res.json(user);
     } catch (err) {
         console.log(err.message);
-        res.status(500).send('Sever Error');
+        res.status(500).send('... Server is @#(burp)$%ed');
     }
 });
 
