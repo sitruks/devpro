@@ -58,8 +58,6 @@ router.post('/', [auth, [
             linkedin
         } = req.body;
 
-        // Build Profile Object in a method different than a series of if statements, i.e.         const profileFields = {}; profileFields.user = req.user.id; if (company) profileFields.company = company; ... ETC
-        if (website) profileFields.website = website;
         // bring in normalize to give us a proper url, regardless of what user entered
         const profileFields = {
             user: req.user.id,
